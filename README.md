@@ -19,9 +19,12 @@ notebooks/
                                                         PR/ROC and calibration, device analysis, CPU inference cost
 data/
   split_manifest.csv        recording -> split (train/test), fold (0-4), device, start time, session_id
+  recording_labels.csv      recording-level labels (6 classes + Abnormal); 'row' gives the row order of every
+                            probability array (train rows for OOF/fold files, test rows for test files)
 results/
   beats/                    OOF and test probabilities, thresholds (Accuracy- and F1-optimal), per-fold histories,
                             test metrics, MLCM, threshold scenarios
+  thresholds_all_models.csv Accuracy- and F1-optimal OOF thresholds of all five models (7 outputs)
   matched_baselines/        OOF and 5-fold test probabilities and test metrics of the four baselines; table5_matched.csv
   frame_event/              frame- and event-level metrics (BEATs vs. CNN-BiGRU), reference test events
   external/                 ICBHI 2017 and SPRSound recording lists, probabilities, predictions and metrics
@@ -46,7 +49,7 @@ The databases are not redistributed here. Obtain them from their original source
 
 Pre-trained weights: BEATs iter3+ (AS2M) from https://github.com/microsoft/unilm/tree/master/beats ; EfficientAT `mn10_as` from https://github.com/fschmid56/EfficientAT ; AST from the Hugging Face checkpoint `MIT/ast-finetuned-audioset-10-10-0.4593`.
 
-Fine-tuned model weights (about 180 MB per BEATs fold) exceed GitHub limits and are available from the authors on reasonable request. All reported metrics can be recomputed from the saved probabilities in `results/`.
+Fine-tuned model weights (about 180 MB per BEATs fold) exceed GitHub limits and are available from the authors on reasonable request. All Table 5 metrics can be recomputed from `data/recording_labels.csv`, `results/thresholds_all_models.csv` and the saved probabilities in `results/` (fold-k validation files fill the training rows with `fold == k`).
 
 ## Environment
 
