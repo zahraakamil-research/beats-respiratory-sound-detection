@@ -1,0 +1,8 @@
+,Inhalation,Exhalation,Crackle,Wheeze,Stridor,Rhonchi,No predicted label
+Inhalation,1935,263,290,87,48,15,0
+Exhalation,5,753,205,56,22,10,129
+Crackle,0,66,297,30,4,7,49
+Wheeze,10,98,61,307,44,4,41
+Stridor,0,1,4,6,1,0,4
+Rhonchi,3,16,165,45,15,46,70
+No true label,4,3,1,2,0,0,0

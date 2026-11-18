@@ -1,0 +1,5 @@
+model,matching,macro_P,macro_R,macro_F1,onset_err_ms,offset_err_ms
+BEATs,iou,0.371,0.381,0.349,91.0,113.0
+BEATs,collar,0.259,0.264,0.244,81.0,82.0
+CNN-BiGRU,iou,0.313,0.178,0.201,185.0,327.0
+CNN-BiGRU,collar,0.155,0.059,0.077,77.0,98.0
