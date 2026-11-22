@@ -1,9 +1,5 @@
 # Respiratory Sound Detection Using a Fine-Tuned BEATs Encoder
 
-Code, split manifest and saved predictions for the paper:
-
-> Z. K. Sadoon and H. H. Jabbar, "Respiratory Sound Detection Using a Fine-Tuned BEATs Encoder," submitted to the *International Journal of Computing and Digital Systems* (IJCDS).
-
 The study fully fine-tunes the AudioSet-pre-trained BEATs encoder (iter3+, AS2M) with a frame-level head (16 ms) to detect six respiratory sound classes (inhalation, exhalation, crackle, wheeze, stridor, rhonchi) plus an auxiliary Abnormal output on **HF_Lung_V1**. It compares BEATs with four baselines retrained under an identical protocol (EfficientAT, AST, CNN-BiGRU, InceptionTime), and tests wheeze detection externally on **ICBHI 2017** and **SPRSound**.
 
 ## Repository structure
